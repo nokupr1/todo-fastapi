@@ -8,7 +8,7 @@ class TaskBase(BaseModel):
     description: Optional[str] = Field(
         None, max_length=150, description="Task description"
     )
-    is_done: bool = Field(..., description="Task completion status")
+    is_done: bool = Field(default=False, description="Task completion status")
 
 
 class TaskCreate(TaskBase):
