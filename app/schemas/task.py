@@ -15,6 +15,16 @@ class TaskCreate(TaskBase):
     pass
 
 
+class TaskUpdate(BaseModel):
+    name: Optional[str] = Field(
+        None, min_length=1, max_length=50, description="Task name"
+    )
+    description: Optional[str] = Field(
+        None, max_length=150, description="Task description"
+    )
+    is_done: Optional[bool] = Field(None, description="Task completion status")
+
+
 class TaskResponse(BaseModel):
     id: int = Field(..., gt=0, description="Task unique identifier")
     name: str
