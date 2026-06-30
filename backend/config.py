@@ -11,8 +11,6 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "http://localhost:3000",
     ]
-    static_dir: str = "static"
-    images_dir: str = "static/images"
 
     class Config:
         env_file = ".env"

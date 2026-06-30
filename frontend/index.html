@@ -1,13 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite + Vue</title>
+        <title>QuickDo</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
         <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            /* Светлая тема */
+            :root {
+                --color-text: #050905;
+                --color-background: #fbfdfb;
+                --color-surface: #ffffff;
+                --color-primary: #5bc14d;
+                --color-secondary: #99e28f;
+                --color-accent: #68e157;
+            }
+
+            /* Мягкая темная тема (Soft Dark) */
+            html.dark {
+                --color-text: #e4e9e4; /* Мягкий, не режущий глаз белый */
+                --color-background: #141714; /* Глубокий темно-серый с зеленым подтоном */
+                --color-surface: #1e221e; /* Чуть светлее фона для карточек */
+                --color-primary: #4fa743; /* Приглушенный основной зеленый */
+                --color-secondary: #314031; /* Темный серо-зеленый для рамок и теней */
+                --color-accent: #5cbf4f; /* Приглушенный акцент */
+            }
+        </style>
+
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            text: "var(--color-text)",
+                            background: "var(--color-background)",
+                            surface: "var(--color-surface)",
+                            primary: "var(--color-primary)",
+                            secondary: "var(--color-secondary)",
+                            accent: "var(--color-accent)",
+                        },
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
     </head>
-    <body>
+    <body
+        class="bg-background text-text font-sans antialiased selection:bg-primary/30 selection:text-text transition-colors duration-500"
+    >
         <div id="app"></div>
         <script type="module" src="/src/main.js"></script>
     </body>
