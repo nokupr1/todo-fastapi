@@ -7,7 +7,7 @@
 
 **QuickDo** — это лаконичное, быстрое и современное приложение для управления задачами. Создано с акцентом на удобство использования, минималистичный дизайн и высокую скорость работы благодаря асинхронному бэкенду.
 
-![QuickDo Screenshot](https://via.placeholder.com/1200x600.png?text=Место+для+скриншота+вашего+приложения)
+![QuickDo Screenshot](<img width="1768" height="1086" alt="image" src="https://github.com/user-attachments/assets/e1fd0640-8577-4c56-bc22-dfa5ee62b269"/>)
 
 ---
 
